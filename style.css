@@ -1,0 +1,43 @@
+/* * {
+  font-family: "Poppins", sans-serif;
+} */
+@import "tailwindcss";
+/* Custom scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* .bg{
+  background-color: #F3F2EC;
+} */
+@theme {
+  --color-myback: #f3f2ec;
+  --color-mygray: #757575;
+  --font-raleway: "Raleway", sans-serif;
+  --font-prata: "Prata", serif;
+  --font-libre-baskerville: "Libre Baskerville", serif;
+  --text-body: 16px;
+  --leading-body: 32px;
+  --leading-nav: normal; /* normal line height */
+  --tracking-nav: normal; /* normal letter spacing */
+  --font-weight-body: 400;
+  --color-mypink: #c5a992;
+  --color-myhero: #2f2f2f;
+  --color-catsec: #eae8df;
+  --color-mycard: #e5e3da;
+  --color-mybook: #74642f;
+}
+@layer utilities {
+  .font-prata {
+    font-family: "Prata", serif;
+  }
+}
+/* @font-face {
+  font-family: "Prata";
+  src: url("./font/Prata/Prata-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+} */

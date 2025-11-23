@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="output.css" rel="stylesheet" />
+    <script src="my.js" defer></script>
+    <title>ReBook</title>
+  </head>
+  <body class="bg-myback">
+    <!-- HEADER SECTION -->
+    <header>
+      <!-- NAVBAR -->
+      <nav
+        class="mt-10 border-y border-gray-300 relative container mx-auto flex items-center justify-between p-4 z-10"
+      >
+        <!-- LOGO -->
+        <div class="flex items-center gap-2">
+          <span class="font-normal font-raleway text-2xl sm:text-3xl"
+            ><b>RE</b>BOOK</span
+          >
+        </div>
+
+        <!-- NAV LINKS -->
+        <ul
+          class="hidden sm:flex justify-center gap-6 md:gap-16 font-raleway text-mygray font-normal text-base sm:text-lg"
+        >
+          <!-- <li><a href="#" class="text-mypink hover:text-amber-300">HOME</a></li> -->
+          <li>
+            <a href="#" class="text-mypink hover:text-orange-200">BOOKS</a>
+          </li>
+          <li><a href="#" class="hover:text-orange-200">NOTES</a></li>
+          <li><a href="#" class="hover:text-orange-200">EXCHANGE</a></li>
+        </ul>
+
+        <!-- LOGIN BUTTON -->
+        <div class="hidden sm:flex justify-end gap-3">
+          <button
+            id="login"
+            class="border border-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition"
+          >
+            Login / Sign Up
+          </button>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <div class="sm:hidden">
+          <button id="menu-btn" class="text-mygray text-3xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobile-menu"
+        class="hidden flex-col items-center bg-gray-200 bg-opacity-95 text-mygray py-6 space-y-4 absolute top-16 left-0 w-full z-20"
+      >
+        <a href="#" class="hover:text-orange-200">Books</a><br />
+        <hr />
+        <a href="#" class="hover:text-orange-200">Notes</a><br />
+        <hr />
+        <a href="#" class="hover:text-orange-200">Exchange</a><br />
+        <hr />
+        <button
+          class="border border-black py-2 px-6 hover:bg-black hover:text-white rounded-full transition"
+        >
+          Login / Sign Up
+        </button>
+      </div>
+
+      <!-- HERO SECTION -->
+      <section
+        class="relative z-10 h-[80vh] flex flex-col justify-center items-center text-center px-4"
+      >
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-prata text-myhero leading-tight"
+        >
+          Swap books. Share knowledge.
+        </h1>
+
+        <p
+          class="mt-4 text-mygray text-base font-raleway sm:text-lg md:text-xl"
+        >
+          Discover, exchange, and share your favorite books.
+        </p>
+
+        <!-- SEARCH BAR -->
+        <div
+          class="mt-8 flex items-center bg-white rounded-full overflow-hidden shadow-xl w-full max-w-2xl"
+        >
+          <input
+            type="text"
+            placeholder="Find your favourite book"
+            class="flex-1 px-4 py-2 sm:py-3 text-gray-800 outline-none text-sm sm:text-base"
+          />
+          <button
+            class="bg-mypink hover:bg-mypink rounded-full text-white px-4 py-2 transition"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </section>
+    </header>
+    <!-- CATEGORY SECTION -->
+    <section
+      class="bg-catsec shadow-2xl shadow-gray-400 flex justify-center items-center py-12 px-4 sm:px-8"
+    >
+      <div
+        class="container mx-auto bg-catsec shadow-2xl rounded-lg p-6 sm:p-8 md:p-10"
+      >
+        <h2
+          class="text-center sm:text-left text-2xl sm:text-3xl font-bold font-prata text-myhero mb-6"
+        >
+          Explore Book Categories
+        </h2>
+
+        <!-- Button Container -->
+        <div
+          class="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 md:gap-6"
+        >
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            All
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            School Books
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            College Books
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            Entry Test
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            University Books
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            Accounting & Finance
+          </button>
+          <button
+            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+          >
+            Medical
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEST SELLER SECTION -->
+    <section
+      class="bg-myback flex border-b-gray-300 justify-center font-prata items-center min-h-[70vh] px-4 sm:px-6 lg:px-8 py-10"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-myback rounded-lg h-auto p-4 sm:p-6 gap-8"
+      >
+        <!-- BEST SELLER TEXT -->
+        <div
+          class="flex flex-col justify-center w-full md:w-1/4 text-center md:text-left"
+        >
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl text-myhero font-medium font-prata"
+          >
+            Featured Books
+          </h1>
+          <button
+            class="text-white mt-4 bg-mypink py-2 px-6 w-max self-center md:self-start rounded-md hover:bg-amber-700 transition"
+          >
+            View Products
+          </button>
+        </div>
+
+        <!-- CARD SLIDER -->
+        <div class="relative w-full md:w-3/4">
+          <!-- Scroll Buttons -->
+          <button
+            id="prev"
+            class="absolute left-1 top-1/2 -translate-y-1/2 bg-mypink text-white p-2 sm:p-3 rounded-full shadow-md z-10 transition hidden sm:block"
+          >
+            &larr;
+          </button>
+          <button
+            id="next"
+            class="absolute right-1 top-1/2 -translate-y-1/2 bg-mypink text-white p-2 sm:p-3 rounded-full shadow-md z-10 transition hidden sm:block"
+          >
+            &rarr;
+          </button>
+
+          <!-- Slider -->
+          <div
+            id="slider"
+            class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-2 sm:px-4 md:px-6 py-2"
+          >
+            <!-- CARD 1 -->
+            <div
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                class="h-48 sm:h-56 w-full object-cover rounded"
+                src="images/asset 2.jpeg"
+                alt="Computer Science"
+              />
+              <h2 class="mt-3 text-base sm:text-lg font-semibold">
+                Computer Science
+              </h2>
+              <button class="mt-2 bg-black text-white w-full py-2 transition">
+                500
+              </button>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                >
+                  <!-- Heart -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-rose-700 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Chat -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-sky-500 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4-.84L3 20l1.84-4.16A9.863 9.863 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                class="h-48 sm:h-56 w-full object-cover rounded"
+                src="images/asset 8.jpeg"
+                alt="Operating System"
+              />
+              <h2
+                class="mt-3 text-base font-prata text-mybook sm:text-lg font-semibold"
+              >
+                Simple Way Of Piece Life
+              </h2>
+              <button class="mt-2 bg-black text-white w-full py-2 transition">
+                500
+              </button>
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                >
+                  <!-- Heart -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-rose-700 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Chat -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-sky-500 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4-.84L3 20l1.84-4.16A9.863 9.863 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                class="h-48 sm:h-56 w-full object-cover rounded"
+                src="images/asset 9.jpeg"
+                alt="ACCA"
+              />
+              <h2 class="mt-3 text-base sm:text-lg text-mybook font-semibold">
+                Great Travel At Desert
+              </h2>
+              <button class="mt-2 bg-black text-white w-full py-2 transition">
+                500
+              </button>
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                >
+                  <!-- Heart -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-rose-700 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Chat -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-sky-500 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4-.84L3 20l1.84-4.16A9.863 9.863 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                class="h-48 sm:h-56 w-full object-cover rounded"
+                src="images/asset 10.jpeg"
+                alt="Physics"
+              />
+              <h2 class="mt-3 text-base text-mybook sm:text-lg font-semibold">
+                The lady beauty Scarlett
+              </h2>
+              <button class="mt-2 bg-black text-white w-full py-2 transition">
+                500
+              </button>
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                >
+                  <!-- Heart -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-rose-700 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Chat -->
+                  <button
+                    class="p-2 rounded-full text-white transition-all duration-300 hover:text-sky-500 hover:scale-110"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4-.84L3 20l1.84-4.16A9.863 9.863 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- QUOTE SECTION -->
+    <section
+      class="relative z-10 h-[80vh] flex flex-col justify-center items-center text-center px-4"
+    >
+      <h1
+        class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-prata font-medium text-myhero leading-tight"
+      >
+        Quote Of The Day
+      </h1>
+
+      <p
+        class="mt-4 text-mygray w-auto text-base font-raleway font-semibold sm:text-lg md:text-xl"
+      >
+        "The more that you read, the more things you will know. The more that
+        you learn, the more places you will go.”
+      </p>
+      <br />
+      <h1 class="text-myhero font-raleway font-semibold">Dr. Seuss</h1>
+    </section>
+    <!-- REVIEW SECTION -->
+
+    <section
+      class="bg-catsec min-h-[80vh] py-20 px-6 sm:px-10 md:px-16 lg:px-20"
+    >
+      <h1
+        class="flex items-center justify-center text-3xl font-bold font-prata text-myhero"
+      >
+        CUSTOMER REVIEWS
+      </h1>
+      <p
+        class="flex pt-3 items-center justify-center text-xl sm:text-2xl text-mygray font-raleway font-light text-center"
+      >
+        See what our customers are saying about their experiences with us
+      </p>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-16 p-10 mt-10"
+      >
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+        >
+          <img class="w-20 rounded-full" src="images/user.png" />
+          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">
+            Muhammad Hassan
+          </h2>
+          <p class="mb-2 text-mygray">
+            I found amazing second-hand books at affordable prices. Highly
+            recommend this marketplace!
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+        >
+          <img class="w-20 rounded-full" src="images/user.png" />
+          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">Ahsan Tasleem</h2>
+          <p class="mb-2 text-mygray">Great service!</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+        >
+          <img class="w-20 rounded-full" src="images/user.png" />
+          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">Faheem Tahir</h2>
+          <p class="mb-2 text-mygray">
+            With exchange offers students can easily exchange their old book.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-black text-white py-6 px-8 flex flex-col md:flex-row justify-between items-center"
+    >
+      <!-- Left Side -->
+
+      <h2 class="text-xl font-semibold mb-4 md:mb-0">Contact Us</h2>
+
+      <!-- Right Side: Social Links -->
+      <div class="flex space-x-6 text-2xl">
+        <a href="#" class="hover:text-blue-500"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="#" class="hover:text-green-400"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="#" class="hover:text-pink-500"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="hover:text-red-500"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
