@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,54 +12,42 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Prata&display=swap"
-      rel="stylesheet"
-    />
 
     <link href="output.css" rel="stylesheet" />
     <script src="my.js" defer></script>
-    <title>ReBook</title>
+    <title>Clevr</title>
   </head>
-  <body class="bg-myback">
+  <body>
     <!-- HEADER SECTION -->
-    <header>
+    <header
+      class="relative bg-cover bg-center bg-no-repeat min-h-screen"
+      style="background-image: url('images/img1.jpg')"
+    >
       <!-- NAVBAR -->
       <nav
-        class="mt-10 border-y border-gray-300 relative container mx-auto flex items-center justify-between p-4 z-10"
+        class="relative container mx-auto flex items-center justify-between p-4 text-white z-10"
       >
         <!-- LOGO -->
         <div class="flex items-center gap-2">
-          <span class="font-normal font-raleway text-2xl sm:text-3xl"
-            ><b>RE</b>BOOK</span
+          <span class="font-bold text-2xl sm:text-3xl text-amber-200"
+            >CLEVR</span
           >
         </div>
 
         <!-- NAV LINKS -->
         <ul
-          class="hidden sm:flex justify-center gap-6 md:gap-16 font-raleway text-mygray font-normal text-base sm:text-lg"
+          class="hidden sm:flex justify-center gap-6 md:gap-16 font-semibold text-base sm:text-lg"
         >
-          <!-- <li><a href="#" class="text-mypink hover:text-amber-300">HOME</a></li> -->
-          <li>
-            <a href="#" class="text-mypink hover:text-orange-200">BOOKS</a>
-          </li>
-          <li><a href="#" class="hover:text-orange-200">NOTES</a></li>
-          <li><a href="#" class="hover:text-orange-200">EXCHANGE</a></li>
+          <li><a href="#" class="hover:text-amber-300">Books</a></li>
+          <li><a href="#" class="hover:text-amber-300">Notes</a></li>
+          <li><a href="#" class="hover:text-amber-300">Exchange</a></li>
         </ul>
 
         <!-- LOGIN BUTTON -->
         <div class="hidden sm:flex justify-end gap-3">
           <button
             id="login"
-            class="border border-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition"
+            class="border border-amber-200 py-2 px-4 rounded-full hover:bg-amber-700 transition"
           >
             Login / Sign Up
           </button>
@@ -66,7 +55,10 @@
 
         <!-- MOBILE MENU BUTTON -->
         <div class="sm:hidden">
-          <button id="menu-btn" class="text-mygray text-3xl focus:outline-none">
+          <button
+            id="menu-btn"
+            class="text-amber-200 text-3xl focus:outline-none"
+          >
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -75,16 +67,16 @@
       <!-- MOBILE MENU -->
       <div
         id="mobile-menu"
-        class="hidden flex-col items-center bg-gray-200 bg-opacity-95 text-mygray py-6 space-y-4 absolute top-16 left-0 w-full z-20"
+        class="hidden flex-col items-center bg-amber-800 bg-opacity-95 text-white py-6 space-y-4 absolute top-16 left-0 w-full z-20"
       >
-        <a href="#" class="hover:text-orange-200">Books</a><br />
+        <a href="#" class="hover:text-amber-300">Books</a><br />
         <hr />
-        <a href="#" class="hover:text-orange-200">Notes</a><br />
+        <a href="#" class="hover:text-amber-300">Notes</a><br />
         <hr />
-        <a href="#" class="hover:text-orange-200">Exchange</a><br />
+        <a href="#" class="hover:text-amber-300">Exchange</a><br />
         <hr />
         <button
-          class="border border-black py-2 px-6 hover:bg-black hover:text-white rounded-full transition"
+          class="border border-amber-200 py-2 px-6 hover:bg-amber-700 transition"
         >
           Login / Sign Up
         </button>
@@ -92,17 +84,15 @@
 
       <!-- HERO SECTION -->
       <section
-        class="relative z-10 h-[80vh] flex flex-col justify-center items-center text-center px-4"
+        class="relative z-10 h-[80vh] flex flex-col justify-center items-center text-center text-white px-4"
       >
         <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-prata text-myhero leading-tight"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
         >
-          Swap books. Share knowledge.
+          Welcome to CLEVR
         </h1>
 
-        <p
-          class="mt-4 text-mygray text-base font-raleway sm:text-lg md:text-xl"
-        >
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-amber-100">
           Discover, exchange, and share your favorite books.
         </p>
 
@@ -116,7 +106,7 @@
             class="flex-1 px-4 py-2 sm:py-3 text-gray-800 outline-none text-sm sm:text-base"
           />
           <button
-            class="bg-mypink hover:bg-mypink rounded-full text-white px-4 py-2 transition"
+            class="bg-amber-700 hover:bg-amber-800 rounded-full text-white px-4 py-2 transition"
           >
             <i class="fas fa-search"></i>
           </button>
@@ -125,13 +115,13 @@
     </header>
     <!-- CATEGORY SECTION -->
     <section
-      class="bg-catsec shadow-2xl shadow-gray-400 flex justify-center items-center py-12 px-4 sm:px-8"
+      class="bg-amber-100 flex justify-center items-center py-12 px-4 sm:px-8"
     >
       <div
-        class="container mx-auto bg-catsec shadow-2xl rounded-lg p-6 sm:p-8 md:p-10"
+        class="container mx-auto bg-amber-100 shadow-2xl rounded-lg p-6 sm:p-8 md:p-10"
       >
         <h2
-          class="text-center sm:text-left text-2xl sm:text-3xl font-bold font-prata text-myhero mb-6"
+          class="text-center sm:text-left text-2xl sm:text-3xl font-bold text-amber-900 mb-6"
         >
           Explore Book Categories
         </h2>
@@ -141,62 +131,62 @@
           class="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 md:gap-6"
         >
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             All
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             School Books
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             College Books
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             Entry Test
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             University Books
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             Accounting & Finance
           </button>
           <button
-            class="rounded-xl border-2 border-mygray bg-mygray py-2 px-5 sm:px-6 text-white font-medium hover:bg-myhero transition"
+            class="rounded-xl border-2 border-amber-800 bg-amber-700 py-2 px-5 sm:px-6 text-white font-medium hover:bg-amber-800 transition"
           >
             Medical
           </button>
         </div>
       </div>
     </section>
-
+    <!-- BEST SELLER SECTION -->
     <!-- BEST SELLER SECTION -->
     <section
-      class="bg-myback flex border-b-gray-300 justify-center font-prata items-center min-h-[70vh] px-4 sm:px-6 lg:px-8 py-10"
+      class="bg-amber-100 flex justify-center items-center min-h-[70vh] px-4 sm:px-6 lg:px-8 py-10"
     >
       <div
-        class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-myback rounded-lg h-auto p-4 sm:p-6 gap-8"
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-amber-100 rounded-lg h-auto p-4 sm:p-6 gap-8"
       >
         <!-- BEST SELLER TEXT -->
         <div
           class="flex flex-col justify-center w-full md:w-1/4 text-center md:text-left"
         >
           <h1
-            class="text-3xl sm:text-4xl md:text-5xl text-myhero font-medium font-prata"
+            class="text-3xl sm:text-4xl md:text-5xl text-amber-950 font-semibold"
           >
-            Featured Books
+            Best Seller
           </h1>
           <button
-            class="text-white mt-4 bg-mypink py-2 px-6 w-max self-center md:self-start rounded-md hover:bg-amber-700 transition"
+            class="text-amber-100 mt-4 bg-amber-600 py-2 px-6 w-max self-center md:self-start rounded-md hover:bg-amber-700 transition"
           >
             View Products
           </button>
@@ -207,13 +197,13 @@
           <!-- Scroll Buttons -->
           <button
             id="prev"
-            class="absolute left-1 top-1/2 -translate-y-1/2 bg-mypink text-white p-2 sm:p-3 rounded-full shadow-md z-10 transition hidden sm:block"
+            class="absolute left-1 top-1/2 -translate-y-1/2 bg-amber-900 text-amber-100 p-2 sm:p-3 rounded-full shadow-md z-10 hover:bg-amber-800 transition hidden sm:block"
           >
             &larr;
           </button>
           <button
             id="next"
-            class="absolute right-1 top-1/2 -translate-y-1/2 bg-mypink text-white p-2 sm:p-3 rounded-full shadow-md z-10 transition hidden sm:block"
+            class="absolute right-1 top-1/2 -translate-y-1/2 bg-amber-900 text-amber-100 p-2 sm:p-3 rounded-full shadow-md z-10 hover:bg-amber-800 transition hidden sm:block"
           >
             &rarr;
           </button>
@@ -225,17 +215,19 @@
           >
             <!-- CARD 1 -->
             <div
-              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-orange-200 hover:shadow-amber-800 rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
             >
               <img
                 class="h-48 sm:h-56 w-full object-cover rounded"
-                src="images/asset 2.jpeg"
+                src="images/book1.jpg"
                 alt="Computer Science"
               />
               <h2 class="mt-3 text-base sm:text-lg font-semibold">
                 Computer Science
               </h2>
-              <button class="mt-2 bg-black text-white w-full py-2 transition">
+              <button
+                class="mt-2 bg-amber-700 text-white w-full py-1 rounded hover:bg-amber-800 transition"
+              >
                 500
               </button>
 
@@ -244,7 +236,7 @@
                 class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <div
-                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                  class="inline-flex bg-yellow-400 gap-3 sm:gap-4 rounded-2xl px-3 py-1"
                 >
                   <!-- Heart -->
                   <button
@@ -291,19 +283,19 @@
 
             <!-- CARD 2 -->
             <div
-              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-orange-200 hover:shadow-amber-800 rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
             >
               <img
                 class="h-48 sm:h-56 w-full object-cover rounded"
-                src="images/asset 8.jpeg"
+                src="images/book2.jpeg"
                 alt="Operating System"
               />
-              <h2
-                class="mt-3 text-base font-prata text-mybook sm:text-lg font-semibold"
-              >
-                Simple Way Of Piece Life
+              <h2 class="mt-3 text-base sm:text-lg font-semibold">
+                Operating System
               </h2>
-              <button class="mt-2 bg-black text-white w-full py-2 transition">
+              <button
+                class="mt-2 bg-amber-700 text-white w-full py-1 rounded hover:bg-amber-800 transition"
+              >
                 500
               </button>
               <!-- Hover Overlay -->
@@ -311,7 +303,7 @@
                 class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <div
-                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                  class="inline-flex bg-yellow-400 gap-3 sm:gap-4 rounded-2xl px-3 py-1"
                 >
                   <!-- Heart -->
                   <button
@@ -358,17 +350,17 @@
 
             <!-- CARD 3 -->
             <div
-              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-orange-200 hover:shadow-amber-800 rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
             >
               <img
                 class="h-48 sm:h-56 w-full object-cover rounded"
-                src="images/asset 9.jpeg"
+                src="images/book3.jpg"
                 alt="ACCA"
               />
-              <h2 class="mt-3 text-base sm:text-lg text-mybook font-semibold">
-                Great Travel At Desert
-              </h2>
-              <button class="mt-2 bg-black text-white w-full py-2 transition">
+              <h2 class="mt-3 text-base sm:text-lg font-semibold">ACCA</h2>
+              <button
+                class="mt-2 bg-amber-700 text-white w-full py-1 rounded hover:bg-amber-800 transition"
+              >
                 500
               </button>
               <!-- Hover Overlay -->
@@ -376,7 +368,7 @@
                 class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <div
-                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                  class="inline-flex bg-yellow-400 gap-3 sm:gap-4 rounded-2xl px-3 py-1"
                 >
                   <!-- Heart -->
                   <button
@@ -423,17 +415,17 @@
 
             <!-- CARD 4 -->
             <div
-              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-mycard hover:shadow-black rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
+              class="relative group flex-shrink-0 w-[85%] sm:w-1/2 md:w-1/3 lg:w-1/4 bg-orange-200 hover:shadow-amber-800 rounded-lg shadow-md p-3 sm:p-4 transition-transform duration-300 hover:-translate-y-1"
             >
               <img
                 class="h-48 sm:h-56 w-full object-cover rounded"
-                src="images/asset 10.jpeg"
+                src="images/book4.jpeg"
                 alt="Physics"
               />
-              <h2 class="mt-3 text-base text-mybook sm:text-lg font-semibold">
-                The lady beauty Scarlett
-              </h2>
-              <button class="mt-2 bg-black text-white w-full py-2 transition">
+              <h2 class="mt-3 text-base sm:text-lg font-semibold">Physics</h2>
+              <button
+                class="mt-2 bg-amber-700 text-white w-full py-1 rounded hover:bg-amber-800 transition"
+              >
                 500
               </button>
               <!-- Hover Overlay -->
@@ -441,7 +433,7 @@
                 class="absolute inset-0 bg-opacity-50 flex justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <div
-                  class="inline-flex bg-mypink gap-3 sm:gap-4 rounded-2xl px-3 py-1"
+                  class="inline-flex bg-yellow-400 gap-3 sm:gap-4 rounded-2xl px-3 py-1"
                 >
                   <!-- Heart -->
                   <button
@@ -489,37 +481,17 @@
         </div>
       </div>
     </section>
-    <!-- QUOTE SECTION -->
-    <section
-      class="relative z-10 h-[80vh] flex flex-col justify-center items-center text-center px-4"
-    >
-      <h1
-        class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-prata font-medium text-myhero leading-tight"
-      >
-        Quote Of The Day
-      </h1>
-
-      <p
-        class="mt-4 text-mygray w-auto text-base font-raleway font-semibold sm:text-lg md:text-xl"
-      >
-        "The more that you read, the more things you will know. The more that
-        you learn, the more places you will go.”
-      </p>
-      <br />
-      <h1 class="text-myhero font-raleway font-semibold">Dr. Seuss</h1>
-    </section>
     <!-- REVIEW SECTION -->
-
     <section
-      class="bg-catsec min-h-[80vh] py-20 px-6 sm:px-10 md:px-16 lg:px-20"
+      class="bg-amber-950 min-h-[80vh] py-20 px-6 sm:px-10 md:px-16 lg:px-20"
     >
       <h1
-        class="flex items-center justify-center text-3xl font-bold font-prata text-myhero"
+        class="flex items-center justify-center text-3xl text-white font-bold"
       >
         CUSTOMER REVIEWS
       </h1>
       <p
-        class="flex pt-3 items-center justify-center text-xl sm:text-2xl text-mygray font-raleway font-light text-center"
+        class="flex pt-3 items-center justify-center text-xl sm:text-2xl text-white font-light text-center"
       >
         See what our customers are saying about their experiences with us
       </p>
@@ -529,13 +501,13 @@
       >
         <!-- Card 1 -->
         <div
-          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+          class="flex flex-col bg-amber-950 rounded-lg duration-1000 shadow-md shadow-yellow-100 p-6 items-center text-center"
         >
           <img class="w-20 rounded-full" src="images/user.png" />
-          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">
+          <h2 class="mt-3 mb-2 text-lg text-white font-bold">
             Muhammad Hassan
           </h2>
-          <p class="mb-2 text-mygray">
+          <p class="mb-2 text-white">
             I found amazing second-hand books at affordable prices. Highly
             recommend this marketplace!
           </p>
@@ -543,20 +515,20 @@
 
         <!-- Card 2 -->
         <div
-          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+          class="flex flex-col bg-amber-950 rounded-lg duration-1000 shadow-md shadow-yellow-100 p-6 items-center text-center"
         >
           <img class="w-20 rounded-full" src="images/user.png" />
-          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">Ahsan Tasleem</h2>
-          <p class="mb-2 text-mygray">Great service!</p>
+          <h2 class="mt-3 mb-2 text-lg text-white font-bold">Ahsan Tasleem</h2>
+          <p class="mb-2 text-white">Great service!</p>
         </div>
 
         <!-- Card 3 -->
         <div
-          class="flex flex-col bg-myback rounded-lg duration-1000 p-6 items-center text-center"
+          class="flex flex-col bg-amber-950 rounded-lg duration-1000 shadow-md shadow-yellow-100 p-6 items-center text-center"
         >
           <img class="w-20 rounded-full" src="images/user.png" />
-          <h2 class="mt-3 mb-2 text-lg text-mybook font-bold">Faheem Tahir</h2>
-          <p class="mb-2 text-mygray">
+          <h2 class="mt-3 mb-2 text-lg text-white font-bold">Faheem Tahir</h2>
+          <p class="mb-2 text-white">
             With exchange offers students can easily exchange their old book.
           </p>
         </div>
